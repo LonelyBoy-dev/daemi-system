@@ -177,6 +177,7 @@
                     var formData = new FormData();
                     formData.append("file", $('#image_profile')[0].files[0]);
                     formData.append("id", '{{$item->id}}');
+                    console.log(formData)
                     $.ajax({
                         type: "post",
                         url: "{{route('uploadimageprofile')}}",

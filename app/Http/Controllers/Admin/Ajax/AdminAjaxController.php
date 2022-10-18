@@ -116,15 +116,15 @@ class AdminAjaxController extends Controller
             $constraint->aspectRatio();
         });
 
-        if (!is_dir('admin/images/user_profile/' . $user->id)) {
-            mkdir("admin/images/user_profile/" . $user->id);
+        if (!is_dir('admin/images/user_profile/')) {
+            mkdir("admin/images/user_profile/" );
         }
 
-        $image->save('admin/images/user_profile/' . $user->id . '/' . $name);
+        $image->save('admin/images/user_profile/' . $name);
 
 
         /*                $file->move('images/user_profile/' . $request->id , $name);*/
-        $user->avatar = 'admin/images/user_profile/' . $user->id . '/' . $name;
+        $user->avatar = 'admin/images/user_profile/'  . $name;
         $user->save();
 
         return response()->json([
