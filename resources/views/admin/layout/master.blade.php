@@ -111,7 +111,7 @@
                     <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
                         <span class="user-profile">
 
-                            <img @if(@Auth::user()->avatar!="") src="{{asset(Auth::user()->avatar)}}" @else src="{{asset('admin/images/user.png')}}" @endif class="img-circle" alt="user avatar">
+                            <img src="{{asset('admin/images/user.png')}}" class="img-circle" alt="user avatar">
                         </span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right">

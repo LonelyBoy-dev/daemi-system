@@ -45,7 +45,7 @@
                                             <div class="col-lg-9">
                                                 @if($item->value)
                                                     <label style="cursor: pointer" for="image{{$item->id}}">
-                                                    <img width="150" height="150" src="{{asset($item->value)}}">
+                                                    <img style="" src="{{asset($item->value)}}">
                                                 </label>
                                                 @endif
                                                 <input style="padding: 3px" class="form-control " id="image{{$item->id}}" name="{{$item->setting}}" type="file" value="{{$item->value}}">
