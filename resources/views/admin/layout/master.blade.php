@@ -328,11 +328,11 @@
 </script>
 <!-- Index js -->
 <script>
-    if ('serviceWorker' in navigator) {
+   /* if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('/service-worker.js');
         });
-    }
+    }*/
 </script>
 @yield('script')
 
