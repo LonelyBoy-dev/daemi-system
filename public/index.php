@@ -51,9 +51,9 @@ require __DIR__.'/../vendor/autoload.php';
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
 //$app = require_once __DIR__.'/local/bootstrap/app.php';
-/*$app->bind('path.public', function() {
+$app->bind('path.public', function() {
     return __DIR__;
-});*/
+});
 $kernel = $app->make(Kernel::class);
 
 $response = tap($kernel->handle(
