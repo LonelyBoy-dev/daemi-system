@@ -59,6 +59,9 @@
  .invalid-feedback{
             text-align: right;
         }
+        input::placeholder {
+            text-align: right;
+        }
     </style>
 </head>
 
@@ -85,7 +88,7 @@
                     @csrf
                     <div class="form-group">
                         <label for="exampleInputUsername" class="sr-only">Username</label>
-                        <div class="position-relative has-icon-right">
+                        <div class="position-relative has-icon-left">
                             <input type="text" id="exampleInputUsername"  name="email" class="form-control input-shadow  @error('email') is-invalid @enderror" placeholder="ایمیل را وارد کنید" value="{{ old('email') }}">
                             <div class="form-control-position">
                                 <i class="icon-user"></i>
@@ -99,7 +102,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword" class="sr-only">Password</label>
-                        <div class="position-relative has-icon-right">
+                        <div class="position-relative has-icon-left">
                             <input type="password" id="exampleInputPassword" class="form-control input-shadow @error('password') is-invalid @enderror" name="password" placeholder="رمز عبور را وارد کنید">
                             <div class="form-control-position">
                                 <i class="icon-lock"></i>

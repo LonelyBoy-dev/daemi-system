@@ -7,6 +7,9 @@
         .table td, .table th{
             white-space:unset;
         }
+        .column10{
+            min-width: 184px;
+        }
         .table-responsive {
             white-space: unset;
         }
@@ -243,7 +246,7 @@
                                         <td>
                                             {{$item->depot}}
                                         </td>
-                                        <td>
+                                        <td class="column10">
                                             <a href="{{route('products.edit',$item->id)}}" type="button" class="btn btn-outline-info waves-effect waves-light">  <span>ویرایش</span><i class="icon-note "></i> </a>
                                             <button onclick="delete_solo_item(this,'{{$item->id}}','{{$table}}')" type="button" class="btn btn-outline-danger waves-effect waves-light">  <span>حذف</span><i class="fa fa fa-trash-o"></i> </button>
                                         </td>
