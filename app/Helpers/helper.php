@@ -52,3 +52,8 @@ function SMS($pattern=null,$mobile=null,$text=null){
     curl_setopt($handler, CURLOPT_RETURNTRANSFER, true);
     $response = curl_exec($handler);
 }
+
+function application_installed()
+{
+    return file_exists(storage_path('installed'));
+}

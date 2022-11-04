@@ -18,7 +18,8 @@ class CreateFactorRowTable extends Migration
             $table->integer('product_id');
             $table->integer('count');
             $table->integer('price')->nullable();
-            $table->integer('discount')->nullable();
+            $table->integer('discount')->default(0)->nullable();
+            $table->integer('ordering')->nullable();
             $table->timestamps();
         });
     }

@@ -17,10 +17,9 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::user() &&  Auth::user()->role == 1) {
+
+        if (Auth::user() &&  Auth::user()->status == 1) {
             return $next($request);
-        }else{
-            session()->put('role-error-login','شما مجوز ورود به پنل را ندارید');
         }
         Auth::logout();
 

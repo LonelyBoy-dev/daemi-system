@@ -17,16 +17,19 @@ class CreateFactorsTable extends Migration
             $table->id();
             $table->bigInteger('factor_id');
             $table->string('name');
-            $table->integer('product_id');
+            $table->bigInteger('product_id');
+            $table->bigInteger('member_id')->nullable();
             $table->integer('count');
             $table->integer('price');
-            $table->integer('new_price');
-            $table->integer('discount');
+            $table->integer('new_price')->nullable();
+            $table->integer('discount')->default(0)->nullable();
             $table->integer('total_price');
-            $table->integer('total_discount_price');
-            $table->integer('install')->nullable();
-            $table->integer('Total_discount');
+            $table->integer('total_discount_price')->nullable();
+            $table->string('install')->nullable();
+            $table->string('install_toman')->nullable();
+            $table->integer('Total_discount')->nullable();
             $table->bigInteger('Total')->nullable();
+            $table->integer('ordering')->nullable();
             $table->timestamps();
         });
     }

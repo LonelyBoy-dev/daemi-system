@@ -1,7 +1,4 @@
-@if(Auth::user())
-        @dd('fff')
 
-        @endif
     <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -18,6 +18,13 @@ trait AuthenticatesUsers
      */
     public function showLoginForm()
     {
+
+        if (!application_installed()) {
+            return redirect('/install');
+        }
+        if (!count(User::all())) {
+            return redirect('/register');
+        }
         return view('auth.login');
     }
 
